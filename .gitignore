@@ -1,0 +1,5 @@
+# build output
+/build/
+/TelemFFB-Panel/64/
+*.user
+/.vs/
