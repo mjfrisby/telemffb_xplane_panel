@@ -4,5 +4,5 @@
 
 #pragma once
 
-#define PANEL_VERSION "0.1.0"
-#define PANEL_VERSION_W L"0.1.0"
+#define PANEL_VERSION "0.1.1"
+#define PANEL_VERSION_W L"0.1.1"
