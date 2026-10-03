@@ -55,6 +55,8 @@ struct Setting {
     double max = 1.0;
     double step = 0.01;
     int button = 0;                 // button: its number, 0 when unbound
+    std::string buttonLabel;        // button: the text to show, names the bound
+                                    // device when the binding is not on this one
 };
 
 // The desktop Monitor tab's content, every value already formatted by

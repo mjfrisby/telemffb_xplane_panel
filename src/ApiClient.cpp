@@ -67,7 +67,10 @@ Setting parseSetting(const Json& item) {
         s.max = item["max"].asNumber(1.0);
         s.step = item["step"].asNumber(0.01);
     } else if (s.control == "button") {
+        // value is a number for a button on this device, or a device-qualified
+        // id string; "label" is the text the desktop form shows for either
         s.button = value.asInt();
+        s.buttonLabel = item["label"].asString();
     }
     return s;
 }

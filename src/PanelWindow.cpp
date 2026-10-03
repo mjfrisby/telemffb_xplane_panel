@@ -456,8 +456,9 @@ void PanelWindow::drawControl(Setting& item, float width) {
         drawRange(item, width);
     } else if (item.control == "button") {
         const BindState bind = api_.bind();
-        char label[64];
+        char label[128];
         if (bind.name == item.name) std::snprintf(label, sizeof(label), "Push a button... %d", bind.remaining);
+        else if (!item.buttonLabel.empty()) std::snprintf(label, sizeof(label), "%s", item.buttonLabel.c_str());
         else if (item.button) std::snprintf(label, sizeof(label), "Button %d", item.button);
         else std::snprintf(label, sizeof(label), "Click to bind");
         if (ImGui::Button(label, ImVec2(width, 0.0f)) && bind.name.empty()) api_.startBind(item.name);
