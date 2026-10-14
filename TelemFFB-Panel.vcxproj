@@ -87,5 +87,8 @@
     <ClInclude Include="src\PanelWindow.h" />
     <ClInclude Include="src\version.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\version.rc" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 </Project>
